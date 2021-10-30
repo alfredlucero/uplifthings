@@ -6,17 +6,52 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct Uplifthing: Identifiable {
+struct Uplifthing: Codable, Identifiable {
     let id: Int
     var thing: String
 }
 
-struct ContentView: View {
-    @State private var uplifthings: [Uplifthing] = Array(repeating: Uplifthing(id: 0, thing: ""), count: 10).enumerated().map { (index, element) in
-        return Uplifthing(id: index + 1, thing: "")
+class UserSettings: ObservableObject {
+    let defaults = UserDefaults.standard
+    // https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/
+    @Published var uplifthings: [Uplifthing] {
+        didSet {
+            do {
+                let encoder = JSONEncoder()
+                let encodedUplifthings = try encoder.encode(uplifthings)
+                defaults.set(encodedUplifthings, forKey: "uplifthings")
+            } catch {
+                print("Unable to encode uplifthings (\(error)")
+            }
+        }
     }
+    
+    init() {
+        if let data = UserDefaults.standard.data(forKey: "uplifthings") {
+            do {
+                let decoder = JSONDecoder()
+                let decodedUplifthings = try decoder.decode([Uplifthing].self, from: data)
+                self.uplifthings = decodedUplifthings
+            } catch {
+                print("Unable to decode uplifthings (\(error))")
+                self.uplifthings = Array(repeating: Uplifthing(id: 0, thing: ""), count: 10).enumerated().map { (index, element) in
+                    return Uplifthing(id: index + 1, thing: "")
+                }
+            }
+        } else {
+            self.uplifthings = Array(repeating: Uplifthing(id: 0, thing: ""), count: 10).enumerated().map { (index, element) in
+                return Uplifthing(id: index + 1, thing: "")
+            }
+        }
+    }
+}
 
+struct ContentView: View {
+    @ObservedObject var userSettings = UserSettings()
+    @Environment(\.editMode) var editMode
+    
     var body: some View {
             VStack {
                 VStack(alignment: .leading, spacing: 8.0) {
@@ -45,17 +80,32 @@ struct ContentView: View {
                     .foregroundColor(Color(hue: 0.488, saturation: 0.531, brightness: 0.488))
 
          
-                List($uplifthings) { $uplifthing in
+                List($userSettings.uplifthings) { $uplifthing in
                     HStack {
                         Text("\($uplifthing.id).")
                             .padding(.horizontal, 5)
                         TextEditor(text: $uplifthing.thing)
                             .multilineTextAlignment(.leading)
                             .lineSpacing(10.0)
+                            .disabled(editMode?.wrappedValue == .inactive)
+                        
                     }
                     .foregroundColor(Color(hue: 0.488, saturation: 0.531, brightness: 0.488))
                 }
                 .padding(.vertical)
+                
+                HStack {
+                    EditButton()
+                    if editMode?.wrappedValue == .active {
+                        Button("Clear") {
+                            // Clear and reset the list
+                            userSettings.uplifthings = Array(repeating: Uplifthing(id: 0, thing: ""), count: 10).enumerated().map { (index, element) in
+                                return Uplifthing(id: index + 1, thing: "")
+                            }
+                        }
+                    }
+                }
+               
             }
         }
 }
