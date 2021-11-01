@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import uplifthings
 
 class uplifthingsTests: XCTestCase {
 
