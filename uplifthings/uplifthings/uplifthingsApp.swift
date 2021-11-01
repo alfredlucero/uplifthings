@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct uplifthingsApp: App {
+    @StateObject var firestoreManager = FirestoreManager()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(firestoreManager)
         }
     }
 }

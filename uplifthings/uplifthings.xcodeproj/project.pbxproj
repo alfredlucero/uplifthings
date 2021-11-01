@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18875769272FA81300E307C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 18875768272FA81300E307C6 /* FirebaseAuth */; };
+		1887576B272FA81300E307C6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1887576A272FA81300E307C6 /* FirebaseDatabase */; };
+		1887576D272FA81300E307C6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1887576C272FA81300E307C6 /* FirebaseFirestore */; };
+		18B23572272F9E77002F346B /* FirebaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B23571272F9E77002F346B /* FirebaseLogin.swift */; };
+		18B23574272FA298002F346B /* UplifthingsExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B23573272FA298002F346B /* UplifthingsExamples.swift */; };
+		18B23576272FA35C002F346B /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B23575272FA35C002F346B /* FirestoreManager.swift */; };
 		18DEAE24271FFD1F00ED2C9A /* uplifthingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE23271FFD1F00ED2C9A /* uplifthingsApp.swift */; };
 		18DEAE26271FFD1F00ED2C9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE25271FFD1F00ED2C9A /* ContentView.swift */; };
 		18DEAE28271FFD2000ED2C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DEAE27271FFD2000ED2C9A /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 		18DEAE35271FFD2100ED2C9A /* uplifthingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE34271FFD2100ED2C9A /* uplifthingsTests.swift */; };
 		18DEAE3F271FFD2100ED2C9A /* uplifthingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE3E271FFD2100ED2C9A /* uplifthingsUITests.swift */; };
 		18DEAE41271FFD2100ED2C9A /* uplifthingsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE40271FFD2100ED2C9A /* uplifthingsUITestsLaunchTests.swift */; };
+		18DEAE4E272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DEAE4D272F8F2700ED2C9A /* GoogleService-Info.plist */; };
+		18DEAE4F272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DEAE4D272F8F2700ED2C9A /* GoogleService-Info.plist */; };
+		18DEAE50272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DEAE4D272F8F2700ED2C9A /* GoogleService-Info.plist */; };
+		18DEAE59272F94A000ED2C9A /* UplifthingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE58272F94A000ED2C9A /* UplifthingsList.swift */; };
+		18DEAE5A272F94A000ED2C9A /* UplifthingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE58272F94A000ED2C9A /* UplifthingsList.swift */; };
+		18DEAE5B272F94A000ED2C9A /* UplifthingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEAE58272F94A000ED2C9A /* UplifthingsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18B23571272F9E77002F346B /* FirebaseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLogin.swift; sourceTree = "<group>"; };
+		18B23573272FA298002F346B /* UplifthingsExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplifthingsExamples.swift; sourceTree = "<group>"; };
+		18B23575272FA35C002F346B /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		18DEAE20271FFD1F00ED2C9A /* uplifthings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uplifthings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DEAE23271FFD1F00ED2C9A /* uplifthingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uplifthingsApp.swift; sourceTree = "<group>"; };
 		18DEAE25271FFD1F00ED2C9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +59,8 @@
 		18DEAE3A271FFD2100ED2C9A /* uplifthingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uplifthingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DEAE3E271FFD2100ED2C9A /* uplifthingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uplifthingsUITests.swift; sourceTree = "<group>"; };
 		18DEAE40271FFD2100ED2C9A /* uplifthingsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uplifthingsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18DEAE4D272F8F2700ED2C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18DEAE58272F94A000ED2C9A /* UplifthingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplifthingsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1887576B272FA81300E307C6 /* FirebaseDatabase in Frameworks */,
+				18875769272FA81300E307C6 /* FirebaseAuth in Frameworks */,
+				1887576D272FA81300E307C6 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +94,7 @@
 		18DEAE17271FFD1F00ED2C9A = {
 			isa = PBXGroup;
 			children = (
+				18DEAE4D272F8F2700ED2C9A /* GoogleService-Info.plist */,
 				18DEAE22271FFD1F00ED2C9A /* uplifthings */,
 				18DEAE33271FFD2100ED2C9A /* uplifthingsTests */,
 				18DEAE3D271FFD2100ED2C9A /* uplifthingsUITests */,
@@ -98,6 +119,10 @@
 				18DEAE25271FFD1F00ED2C9A /* ContentView.swift */,
 				18DEAE27271FFD2000ED2C9A /* Assets.xcassets */,
 				18DEAE29271FFD2000ED2C9A /* Preview Content */,
+				18DEAE58272F94A000ED2C9A /* UplifthingsList.swift */,
+				18B23571272F9E77002F346B /* FirebaseLogin.swift */,
+				18B23573272FA298002F346B /* UplifthingsExamples.swift */,
+				18B23575272FA35C002F346B /* FirestoreManager.swift */,
 			);
 			path = uplifthings;
 			sourceTree = "<group>";
@@ -143,6 +168,11 @@
 			dependencies = (
 			);
 			name = uplifthings;
+			packageProductDependencies = (
+				18875768272FA81300E307C6 /* FirebaseAuth */,
+				1887576A272FA81300E307C6 /* FirebaseDatabase */,
+				1887576C272FA81300E307C6 /* FirebaseFirestore */,
+			);
 			productName = uplifthings;
 			productReference = 18DEAE20271FFD1F00ED2C9A /* uplifthings.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 18DEAE17271FFD1F00ED2C9A;
+			packageReferences = (
+				18875767272FA81300E307C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 18DEAE21271FFD1F00ED2C9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +266,7 @@
 			files = (
 				18DEAE2B271FFD2000ED2C9A /* Preview Assets.xcassets in Resources */,
 				18DEAE28271FFD2000ED2C9A /* Assets.xcassets in Resources */,
+				18DEAE4E272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DEAE4F272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DEAE50272F8F2800ED2C9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B23572272F9E77002F346B /* FirebaseLogin.swift in Sources */,
+				18B23576272FA35C002F346B /* FirestoreManager.swift in Sources */,
+				18DEAE59272F94A000ED2C9A /* UplifthingsList.swift in Sources */,
 				18DEAE26271FFD1F00ED2C9A /* ContentView.swift in Sources */,
+				18B23574272FA298002F346B /* UplifthingsExamples.swift in Sources */,
 				18DEAE24271FFD1F00ED2C9A /* uplifthingsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DEAE35271FFD2100ED2C9A /* uplifthingsTests.swift in Sources */,
+				18DEAE5A272F94A000ED2C9A /* UplifthingsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DEAE5B272F94A000ED2C9A /* UplifthingsList.swift in Sources */,
 				18DEAE41271FFD2100ED2C9A /* uplifthingsUITestsLaunchTests.swift in Sources */,
 				18DEAE3F271FFD2100ED2C9A /* uplifthingsUITests.swift in Sources */,
 			);
@@ -479,7 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +645,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18875767272FA81300E307C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18875768272FA81300E307C6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18875767272FA81300E307C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1887576A272FA81300E307C6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18875767272FA81300E307C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		1887576C272FA81300E307C6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18875767272FA81300E307C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18DEAE18271FFD1F00ED2C9A /* Project object */;
 }
