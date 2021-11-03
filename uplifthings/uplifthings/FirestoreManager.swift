@@ -51,4 +51,32 @@ class FirestoreManager: ObservableObject {
             }
         }
     }
+    
+    func createUplifthingExample(thing: String) {
+        let db = Firestore.firestore()
+
+        let docRef = db.collection("UplifthingExamples").document("ExampleUpdate")
+
+        docRef.setData(["thing": thing]) { error in
+            if let error = error {
+                print("Error writing document: \(error)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
+    
+    func updateUplifthingExample(thing: String) {
+        let db = Firestore.firestore()
+
+        let docRef = db.collection("UplifthingExamples").document("ExampleUpdate")
+
+        docRef.setData(["thing": thing], merge: true) { error in
+            if let error = error {
+                print("Error writing document: \(error)")
+            } else {
+                print("Document successfully merged!")
+            }
+        }
+    }
 }
